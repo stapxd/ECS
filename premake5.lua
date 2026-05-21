@@ -1,5 +1,4 @@
 project "ECS"
-    location "ECS"
     kind "staticlib"
     language "C++"
     cppdialect "C++17"
@@ -10,16 +9,15 @@ project "ECS"
 
     files
     {
-        "include/**.h",
-
-        "src/**.h",
-        "src/**.cpp"
+        "ECS/include/ECS/**.h",
+        "ECS/src/ECS/**.h",
+        "ECS/src/ECS/**.cpp"
     }
 
     includedirs
     {
-        "include",
-        "src"
+        "ECS/include",
+        "ECS/src"
     }
 
     filter "system:windows"
