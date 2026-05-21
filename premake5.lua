@@ -10,16 +10,16 @@ project "ECS"
 
     files
     {
-        "%{prj.name}/include/**.h",
+        "include/**.h",
 
-        "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "src/**.h",
+        "src/**.cpp"
     }
 
     includedirs
     {
-        "%{prj.name}/include",
-        "%{prj.name}/src"
+        "include",
+        "src"
     }
 
     filter "system:windows"
