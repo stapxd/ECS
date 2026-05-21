@@ -41,6 +41,12 @@ namespace ecs {
 			return pool->Get(e);
 		}
 
+		template<typename C>
+		bool has(entity e) {
+			auto pool = GetPool<C>();
+			return pool->has(e);
+		}
+
 		template<typename C, typename... Args>
 		void emplace(entity e, Args&&... args) {
 			if (!e.IsValid())
