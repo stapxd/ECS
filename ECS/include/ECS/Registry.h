@@ -35,6 +35,12 @@ namespace ecs {
 			pool->Destroy(e);
 		}
 
+		template<typename C>
+		C* get(entity e) {
+			auto pool = GetPool<C>();
+			return pool->Get(e);
+		}
+
 		template<typename C, typename... Args>
 		void emplace(entity e, Args&&... args) {
 			if (!e.IsValid())
